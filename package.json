@@ -1,8 +1,35 @@
 {
   "name": "jquery.twitterlinks",
+  "description": "This jQuery plugin turns URLs, Twitter @users & Twitter #hashtags into working urls, within a given container (selector).",
   "version": "1.0.0",
+  "dependencies": {
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-uglify": "^0.6.0"
-  }
+  },
+  "main": "dist/jquery.twitterlinks.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcgraths/jquery.twitterlinks.git"
+  },
+  "keywords": [
+    "ecosystem:jquery",
+    "jquery-plugin",
+    "twitter",
+    "parse",
+    "mention",
+    "username",
+    "hashtag",
+    "url"
+  ],
+  "author": "Sean McGrath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcgraths/jquery.twitterlinks/issues"
+  },
+  "homepage": "https://github.com/mcgraths/jquery.twitterlinks"
 }
