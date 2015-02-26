@@ -1,7 +1,7 @@
 jquery.twitterlinks.js
 ==================
 
-jquery.twitterlinks.js turns URLs, Twitter @users &amp; Twitter #hashtags into working urls, within a given container (selector).
+This jQuery plugin turns URLs, Twitter @users &amp; Twitter #hashtags into working urls, within a given container (selector).
 
 This plugin is based on **jquery.tweetParser**, but has been modified to be a bit more accurate, multi-purpose and configureable.
 
@@ -27,15 +27,15 @@ This plugin is based on **jquery.tweetParser**, but has been modified to be a bi
 
 ## Installation
 
-##### You can install twitterlinks.js with Bower
+##### You can install jquery.witterlinks.js with Bower
 
-if you want to use bower just type:
+If you want to use bower just type:
 
 ```
 bower install jquery.twitterlinks
 ```
 
-##### Add jquery lib and jquery.twitterlinks.min.js to your HTML document
+##### Add jquery and jquery.twitterlinks.min.js to your HTML document
 
 ```html
     <script src="path/to/jquery.min.js"></script>
