@@ -89,3 +89,13 @@ bower install jquery.twitterlinks
         </ul>
     </div>
  ```
+
+ ## Todo
+
+ - [ ] Cleaner Regex for URLs
+ - [ ] Cleaner Regex for Hashtags
+ - [ ] Submit to Bower
+ - [ ] Submit to jQuery
+ - [ ] Better Demo
+ - [ ] GitHub pages
+ - [ ] Grunt improvements (jshint, watch, banners, versioning)

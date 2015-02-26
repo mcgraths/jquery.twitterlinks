@@ -1,5 +1,5 @@
 /*!
- * jquery.twitterlinks v1.1.1
+ * jquery.twitterlinks v0.1.0
  * Turn URLS, twitter @users & twitter #hashtags into urls
  * MIT License
  * by Sean McGrath

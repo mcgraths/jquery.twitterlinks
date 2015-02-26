@@ -1,6 +1,6 @@
 {
   "name": "jquery.twitterlinks",
-  "version": "1.1.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/mcgraths/jquery.twitterlinks",
   "authors": [
     "Sean McGrath <mcgraths@gmail.com>"
@@ -8,7 +8,7 @@
   "description": "Parse Twitter Usernames, Hashtags and URLs Using jQuery",
   "main": [
     "dist/jquery.twitterlinks.min.js",
-    "dev/jquery.twitterlinks.js"
+    "src/jquery.twitterlinks.js"
   ],
   "moduleType": [
     "globals"
@@ -21,6 +21,7 @@
     "parser",
     "parse",
     "username",
+    "mention",
     "hashtag",
     "url",
     "minimal"
@@ -28,16 +29,15 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "dev/demo.js",
-    "dev/vendor",
+    "demo",
     "node_modules",
     "bower_components",
     "*.md"
   ],
   "dependencies": {
-    "jquery": "~2.1.2"
+    "jquery": ">=1.6"
   },
   "devDependencies": {
-    "jquery": "~2.1.2"
+    "jquery": ">=1.6"
   }
 }
