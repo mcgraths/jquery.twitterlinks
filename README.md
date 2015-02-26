@@ -1,7 +1,6 @@
-tweetParser.js
+twitterlinks.js
 ==================
-![Parse Twitter Usernames, Hashtags and URLs Using jQuery](https://farm8.staticflickr.com/7562/15860082069_62c9540ddd_b.jpg)
-tweetParser.js Parse elements containing a tweets and turn URLS, @users &amp; #hashtags into working urls
+twitterlinks.js Turn URLS, @users &amp; #hashtags into working urls, within a given container
 
 #### PARAMETERS
 
@@ -15,16 +14,16 @@ tweetParser.js Parse elements containing a tweets and turn URLS, @users &amp; #h
 
 #### INITIALISATION
 
-##### You can install tweetParser.js with Bower
+##### You can install twitterlinks.js with Bower
 if you want to use bower just type :
 ```
-bower install jquery.tweet-parser
+bower install jquery.twitterlinks
 ```
 
-##### Add jquery lib and tweetParser.min.js to your HTML document
+##### Add jquery lib and twitterlinks.min.js to your HTML document
 ```html
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.tweetParser.min.js"></script>
+    <script src="js/jquery.twitterlinks.min.js"></script>
 ```
 
 
@@ -34,14 +33,14 @@ bower install jquery.tweet-parser
  ```
  
  
-##### getting started with tweetParser
+##### getting started with twitterlinks
 
 ```javascript   
     //basic usage
-    $("p.tweets").tweetParser();
+    $("p.tweets").twitterlinks();
     
     //With parameters
-    $("p.tweets").tweetParser({
+    $("p.tweets").twitterlinks({
         urlClass : "tweet_link", //this is default
         userClass : "tweet_user", //this is default
         hashtagClass : "hashtag", //this is default
@@ -51,7 +50,7 @@ bower install jquery.tweet-parser
 ```
 
 #### RESULT EXAMPLE
-###### Check out the [demo](http://vincent-loy.fr/lab/tweetParser/) or try it in [codepen.io](http://codepen.io/VincentL/pen/PwzXJp)
+###### Check out the [demo](http://vincent-loy.fr/lab/twitterlinks/) or try it in [codepen.io](http://codepen.io/VincentL/pen/PwzXJp)
 you can customize your tweet with css classes used in parameters
 
 ![Result After parsing tweets](https://farm9.staticflickr.com/8670/15852276268_221f9f8b85_o.png)
@@ -63,7 +62,7 @@ you can customize your tweet with css classes used in parameters
   * searchWithHashtags parameter added
 
     You can now choose where hashtags links will point to.
-    when searchWithHastags = true (default), tweetParser will generate the following link for each hashtags : "twitter.com/hashtag/THE_HASHTAG".  
+    when searchWithHastags = true (default), twitterlinks will generate the following link for each hashtags : "twitter.com/hashtag/THE_HASHTAG".  
     if you set it to false, the link will be : "twitter.com/search?q=THE_HASHTAG"
    
   * code optimisation, remove useless var.

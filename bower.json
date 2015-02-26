@@ -1,14 +1,14 @@
 {
-  "name": "jquery.tweetParser",
+  "name": "jquery.twitterlinks",
   "version": "1.1.1",
-  "homepage": "https://github.com/VincentLoy/jquery.tweetParser",
+  "homepage": "https://github.com/mcgraths/jquery.twitterlinks",
   "authors": [
-    "VincentLoy <vincent.loy1@gmail.com>"
+    "Sean McGrath <mcgraths@gmail.com>"
   ],
   "description": "Parse Twitter Usernames, Hashtags and URLs Using jQuery",
   "main": [
-    "dist/jquery.tweetParser.min.js",
-    "dev/jquery.tweetParser.js"
+    "dist/jquery.twitterlinks.min.js",
+    "dev/jquery.twitterlinks.js"
   ],
   "moduleType": [
     "globals"
