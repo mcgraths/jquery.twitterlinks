@@ -12,7 +12,7 @@ module.exports = function(grunt){
 			},
 			my_target: {
 				files: {
-					'dist/jquery.twitterlinks.min.js' : 'dev/jquery.twitterlinks.js'
+					'dist/jquery.twitterlinks.min.js' : 'src/jquery.twitterlinks.js'
 				}
 			}
 		}
