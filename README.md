@@ -1,74 +1,91 @@
-twitterlinks.js
+jquery.twitterlinks.js
 ==================
-twitterlinks.js Turn URLS, @users &amp; #hashtags into working urls, within a given container
 
-#### PARAMETERS
+jquery.twitterlinks.js turns URLs, Twitter @users &amp; Twitter #hashtags into working urls, within a given container (selector).
+
+This plugin is based on **jquery.tweetParser**, but has been modified to be a bit more accurate, multi-purpose and configureable.
+
+**Major Differences:**
+
+- More accurate regular expressions
+- Operates on HTML content
+- You can use larger, more global containers
+- Configure which items you wish to parse
+
+## PARAMETERS
 
 | Parameters | Type | default | description |
 | ------------- | ----------- | ----------- | ----------- |
+| parseUrls  | Boolean | true | Whether or not to parse URLs |
+| parseUsers  | Boolean | true | Whether or not to parse @users |
+| parseHashtags  | Boolean | true | Whether or not to parse #hashtags |
 | urlClass  | String | tweet_link | css Class used for url in the tweet |
 | userClass | String | tweet_user | css Class used for @user profil url in the tweet |
 | hashtagClass | String | hashtag | css Class used for hashtags url in the tweet |
 | target | HTML attribute for anchor tags | _blank | target used for all <a> generated |
 | searchWithHashtags | Boolean | true | generate hashtag link, if true : "twitter.com/hashtag/", if false : "twitter.com/search?q=" |
 
-#### INITIALISATION
+## Installation
 
 ##### You can install twitterlinks.js with Bower
-if you want to use bower just type :
+
+if you want to use bower just type:
+
 ```
 bower install jquery.twitterlinks
 ```
 
-##### Add jquery lib and twitterlinks.min.js to your HTML document
+##### Add jquery lib and jquery.twitterlinks.min.js to your HTML document
+
 ```html
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.twitterlinks.min.js"></script>
+    <script src="path/to/jquery.min.js"></script>
+    <script src="path/to/jquery.twitterlinks.min.js"></script>
 ```
 
+## Usage
 
-##### Your tweet in your html document
+##### HTML
+
 ```html
-    <p class="tweets">This is my awesome text only tweet ! #web #twitter @twitter http://www.twitter.com/ !!</p>
+    <div class="post-body">
+        <ul>
+            <li>#omg</li>
+            <li>@lol</li>
+            <li>http://wtf.com</li>
+        </ul>
+    </div>
  ```
  
  
-##### getting started with twitterlinks
+##### Javascript
 
-```javascript   
-    //basic usage
-    $("p.tweets").twitterlinks();
-    
-    //With parameters
-    $("p.tweets").twitterlinks({
-        urlClass : "tweet_link", //this is default
-        userClass : "tweet_user", //this is default
-        hashtagClass : "hashtag", //this is default
-        target : "_blank", //this is default
-        searchWithHashtags : true //this is default
+```javascript 
+    $(document).ready(function() {
+         //basic usage
+        $(".post-body").twitterlinks();
+        
+        //With parameters, defaults
+        $(".post-body").twitterlinks({
+            parseUrls: true,
+            parseUsers: true,
+            parseHashtags: true,
+            urlClass : "tweet_link",
+            userClass : "tweet_user",
+            hashtagClass : "hashtag",
+            target : "_blank",
+            searchWithHashtags : true
+        });
     });
 ```
 
-#### RESULT EXAMPLE
-###### Check out the [demo](http://vincent-loy.fr/lab/twitterlinks/) or try it in [codepen.io](http://codepen.io/VincentL/pen/PwzXJp)
-you can customize your tweet with css classes used in parameters
+##### Results
 
-![Result After parsing tweets](https://farm9.staticflickr.com/8670/15852276268_221f9f8b85_o.png)
-
-
-#### Changelog
- 
-+ v1.1.0
-  * searchWithHashtags parameter added
-
-    You can now choose where hashtags links will point to.
-    when searchWithHastags = true (default), twitterlinks will generate the following link for each hashtags : "twitter.com/hashtag/THE_HASHTAG".  
-    if you set it to false, the link will be : "twitter.com/search?q=THE_HASHTAG"
-   
-  * code optimisation, remove useless var.
-  
-+ v1.0.0
-
-   Initial Version
-
-
+```html
+    <div class="post-body">
+        <ul>
+            <li><a target="_blank" href="https://twitter.com/hashtag/omg" class="hashtag">#omg</a></li>
+            <li><a target="_blank" href="http://twitter.com/lol" class="tweet_user">@lol</a></li>
+            <li><a target="_blank" href="http://wtf.com" class="tweet_link">http://wtf.com</a></li>
+        </ul>
+    </div>
+ ```

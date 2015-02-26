@@ -8,7 +8,7 @@
 (function($) {
     "use strict";
 
-    $.fn.twitterlink = function(options) {
+    $.fn.twitterlinks = function(options) {
 
         var defauts = {
             "parseUrls": true,
@@ -39,16 +39,16 @@
             }
 
             //regex
-            var regexUrl = /\s(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/g; //regex for urls
+            var regexUrl = /([^\"\'])(https?|ftps?)(\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3})(\/\S*)?/g; //regex for urls
             var regexUser = /\B@([a-zA-Z0-9_-]+)/g; //regex for @users
             var regexHashtag = /([^\/]\B)(#[a-zA-Z0-9_-]+)/g; //regex for #hashtags
 
             //turn URLS in the content into... working urls
             if (params.parseUrls)
-                content = content.replace(regexUrl, function(url) {
-
-                    var link = '<a target="' + params.target + '" href="' + url + '" class="' + params.urlClass + '">' + url + '</a>';
-                    return url.replace(url, link);
+                content = content.replace(regexUrl, function(fullmatch, prefix, protocol, url, querystring) {
+                    var fullurl = protocol + url + (querystring || "");
+                    var link = '<a target="' + params.target + '" href="' + fullurl + '" class="' + params.urlClass + '">' + fullurl + '</a>';
+                    return prefix + fullurl.replace(fullurl, link);
                 });
 
             //turn @users in the content into... working urls
@@ -71,9 +71,6 @@
 
             //then, it inject the last var into the element containing the content
             $(this).html(content);
-
-            //add target attribute to all urls
-
 
         });
     };
