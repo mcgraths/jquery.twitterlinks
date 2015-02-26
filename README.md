@@ -95,7 +95,8 @@ bower install jquery.twitterlinks
     </div>
  ```
 
- ## Todo
+
+## Todo
 
  - [ ] Cleaner Regex for URLs
  - [ ] Cleaner Regex for Hashtags
