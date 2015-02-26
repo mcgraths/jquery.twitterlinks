@@ -27,7 +27,12 @@ This plugin is based on **jquery.tweetParser**, but has been modified to be a bi
 
 ## Installation
 
-##### You can install jquery.witterlinks.js with Bower
+##### Download
+
+- [Download the latest stable release](https://github.com/mcgraths/jquery.twitterlinks/releases)
+- [Download the lastest build](https://github.com/mcgraths/jquery.twitterlinks/archive/master.zip)
+
+##### Using Bower
 
 If you want to use bower just type:
 
@@ -94,7 +99,7 @@ bower install jquery.twitterlinks
 
  - [ ] Cleaner Regex for URLs
  - [ ] Cleaner Regex for Hashtags
- - [ ] Submit to Bower
+ - [x] Submit to Bower
  - [ ] Submit to jQuery
  - [ ] Better Demo
  - [ ] GitHub pages
